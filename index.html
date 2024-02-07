@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- Les classes doivent être définies avant -->
+    <script src="assets/js/listeQuestions.js" defer></script>
+    <script src="assets/js/classes/Pointage.js" defer></script>
+    <script src="assets/js/classes/Question.js" defer></script>
+    <script src="assets/js/classes/Quiz.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <title>Exercice</title>
+  </head>
+
+  <body>
+    <header><div ></div></header>
+    <main>
+      <div class="center" data-panneau-debut>
+        <h1>Bienvenue sur le quiz </h1>
+        <div class="btn" data-btn-demarrer>Démarrer</div>
+      </div>
+      <div data-panneau-question>
+        <div data-bloc-question data-reponse="3">
+          <h1 data-question>Question</h1>
+          <div data-liste-reponses>
+            <div data-btn-reponse="0">Reponse 1</div>
+            <div data-btn-reponse="1">Reponse 2</div>
+            <div data-btn-reponse="2">Reponse 3</div>
+          </div>
+          <div data-boite-message></div>
+        </div>
+      </div>
+      <div class="center" data-panneau-fin>
+        <h2>Score final</h2>
+        <p data-score></p>
+        <h3 data-message>Tu as tout réussi</h3>
+        <div class="btn recommencer">Recommencer</div>
+      </div>
+    </main>
+  </body>
+</html>

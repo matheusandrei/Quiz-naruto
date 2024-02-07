@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url(reset.css);
+@import url(font.css);
+
+/* Styles de base */
+:root {
+    --coul-noir: #0D0D0D;
+    --coul-gris: #BFBFBA;
+    --coul-rouge:#A6263E;
+    --coul-jaune:#D9CC1E;
+    --coul-orange:#F26D3D;
+}
+
+html,
+body {
+    font-family:'naruto', Arial, sans-serif;
+    color: var(--coul-gris);
+    font-weight: 500;
+    line-height: 1.2;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    background-image: url("/02_Demo/DemoStart/assets/img/naruto.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-bottom: 1.2rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    color: var(--coul-noir);
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--coul-principale-moyen-bleu);
+}
+
+h3 {
+    font-size: 1.75rem;
+    font-weight: 500;
+
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.075rem;
+   
+}
+
+p {
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.025rem;
+    
+}
+
+hr {
+    height: 4px;
+    background-color: var(--coul-principale-moyen-vert);
+    border: none;
+    margin-bottom: 1.5rem;
+}
+
+header {
+    flex-basis: 100%;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+main {
+    width: initial;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    
+
+    
+
+    [data-bloc-question] {
+        background-color: var(--coul-orange);
+        padding: 2rem;
+        max-width: 50vw;
+
+        & [data-liste-reponses] {
+            display: flex;
+            gap: 1rem;
+
+            & [data-btn-reponse] {
+                padding: 2rem;
+                background-color: var(--coul-jaune);
+                color: var(--coul-noir);
+                font-weight: 800;
+                cursor: pointer;
+                transition: 1000ms all;
+                
+
+                &:hover {
+                    background-color: #f5eb34;
+                    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.2);
+                }
+
+                &:active {
+                    background-color: color-mix(in hsl, firebrick, tomato 50%);
+                }
+            }
+        }
+
+        & [data-boite-message] {
+            padding-block: 2rem;
+            font-size: 3rem;
+        }
+
+        &.inactif {
+            & [data-btn-reponse] {
+                pointer-events: none;
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+
+[data-btn-reponse].succes {
+    pointer-events: none;
+    background-color: rgb(135, 219, 27) !important;
+}
+
+[data-btn-reponse].erreur {
+    pointer-events: none;
+    background-color:  var(--coul-rouge)!important;
+}
+
+[data-btn-reponse].inactif {
+    pointer-events: none;
+    background-color:  var(--coul-gris)!important;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: 'naruto', Arial, sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+.invisible {
+    display: none;
+}
